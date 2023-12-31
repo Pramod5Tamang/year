@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+html, body {
+  background: #000;
+  overflow: hidden;
+}
+html h1, body h1 {
+  color: skyblue;
+  position: absolute;
+  top: 0;
+  padding: 15vh 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html h2, body h2 {
+  color:cornflowerblue;
+  position: absolute;
+  top: 0;
+  padding: 70vh 0;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  font-family:'Courier New', Courier, monospace;
+}
+.star {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/star.png);
+  background-size: cover;
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+  opacity: 0;
+}
+
+.firework {
+  background-size: cover;
+  top: 0;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.firework:nth-of-type(1) {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/green.png);
+  margin: 1vh 30vw;
+  -webkit-animation: firework 1s linear infinite forwards;
+          animation: firework 1s linear infinite forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.firework:nth-of-type(2) {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/red.png);
+  margin: 3vh 45vw;
+  -webkit-animation: firework 0.4s linear infinite forwards;
+          animation: firework 0.4s linear infinite forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.firework:nth-of-type(3) {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/red.png);
+  margin: 3vh 16vw;
+  -webkit-animation: firework 0.6s linear infinite forwards;
+          animation: firework 0.6s linear infinite forwards;
+  -webkit-animation-delay: 1.6666666667s;
+          animation-delay: 1.6666666667s;
+}
+
+.firework:nth-of-type(4) {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/red.png);
+  margin: 2vh 27vw;
+  -webkit-animation: firework 8s linear infinite forwards;
+          animation: firework 8s linear infinite forwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.firework:nth-of-type(5) {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217538/green.png);
+  margin: 4vh 42vw;
+  -webkit-animation: firework 9s linear infinite forwards;
+          animation: firework 9s linear infinite forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.star:nth-of-type(1) {
+  margin: 5vh 74vw;
+  -webkit-animation: flickr 3s linear infinite forwards;
+          animation: flickr 3s linear infinite forwards;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.star:nth-of-type(2) {
+  margin: 3vh 47vw;
+  -webkit-animation: flickr 8s linear infinite forwards;
+          animation: flickr 8s linear infinite forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.star:nth-of-type(3) {
+  margin: 5vh 37vw;
+  -webkit-animation: flickr 12s linear infinite forwards;
+          animation: flickr 12s linear infinite forwards;
+  -webkit-animation-delay: 1.6666666667s;
+          animation-delay: 1.6666666667s;
+}
+
+.star:nth-of-type(4) {
+  margin: 7vh 87vw;
+  -webkit-animation: flickr 8s linear infinite forwards;
+          animation: flickr 8s linear infinite forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.star:nth-of-type(5) {
+  margin: 6vh 40vw;
+  -webkit-animation: flickr 10s linear infinite forwards;
+          animation: flickr 10s linear infinite forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.star:nth-of-type(6) {
+  margin: 4vh 48vw;
+  -webkit-animation: flickr 18s linear infinite forwards;
+          animation: flickr 18s linear infinite forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.star:nth-of-type(7) {
+  margin: 2vh 29vw;
+  -webkit-animation: flickr 21s linear infinite forwards;
+          animation: flickr 21s linear infinite forwards;
+  -webkit-animation-delay: 0.1428571429s;
+          animation-delay: 0.1428571429s;
+}
+
+.star:nth-of-type(8) {
+  margin: 1vh 88vw;
+  -webkit-animation: flickr 24s linear infinite forwards;
+          animation: flickr 24s linear infinite forwards;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
+}
+
+.star:nth-of-type(9) {
+  margin: 2vh 79vw;
+  -webkit-animation: flickr 27s linear infinite forwards;
+          animation: flickr 27s linear infinite forwards;
+  -webkit-animation-delay: 0.3333333333s;
+          animation-delay: 0.3333333333s;
+}
+
+.star:nth-of-type(10) {
+  margin: 7vh 60vw;
+  -webkit-animation: flickr 20s linear infinite forwards;
+          animation: flickr 20s linear infinite forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.star:nth-of-type(11) {
+  margin: 5vh 90vw;
+  -webkit-animation: flickr 11s linear infinite forwards;
+          animation: flickr 11s linear infinite forwards;
+  -webkit-animation-delay: 0.0909090909s;
+          animation-delay: 0.0909090909s;
+}
+
+.star:nth-of-type(12) {
+  margin: 1vh 33vw;
+  -webkit-animation: flickr 48s linear infinite forwards;
+          animation: flickr 48s linear infinite forwards;
+  -webkit-animation-delay: 0.3333333333s;
+          animation-delay: 0.3333333333s;
+}
+
+.star:nth-of-type(13) {
+  margin: 10vh 44vw;
+  -webkit-animation: flickr 26s linear infinite forwards;
+          animation: flickr 26s linear infinite forwards;
+  -webkit-animation-delay: 0.0769230769s;
+          animation-delay: 0.0769230769s;
+}
+
+.star:nth-of-type(14) {
+  margin: 6vh 66vw;
+  -webkit-animation: flickr 42s linear infinite forwards;
+          animation: flickr 42s linear infinite forwards;
+  -webkit-animation-delay: 0.2142857143s;
+          animation-delay: 0.2142857143s;
+}
+
+.star:nth-of-type(15) {
+  margin: 7vh 88vw;
+  -webkit-animation: flickr 45s linear infinite forwards;
+          animation: flickr 45s linear infinite forwards;
+  -webkit-animation-delay: 0.2666666667s;
+          animation-delay: 0.2666666667s;
+}
+
+.star:nth-of-type(16) {
+  margin: 10vh 81vw;
+  -webkit-animation: flickr 32s linear infinite forwards;
+          animation: flickr 32s linear infinite forwards;
+  -webkit-animation-delay: 0.1875s;
+          animation-delay: 0.1875s;
+}
+
+.star:nth-of-type(17) {
+  margin: 7vh 51vw;
+  -webkit-animation: flickr 17s linear infinite forwards;
+          animation: flickr 17s linear infinite forwards;
+  -webkit-animation-delay: 0.2941176471s;
+          animation-delay: 0.2941176471s;
+}
+
+.star:nth-of-type(18) {
+  margin: 10vh 9vw;
+  -webkit-animation: flickr 54s linear infinite forwards;
+          animation: flickr 54s linear infinite forwards;
+  -webkit-animation-delay: 0.1111111111s;
+          animation-delay: 0.1111111111s;
+}
+
+.star:nth-of-type(19) {
+  margin: 5vh 53vw;
+  -webkit-animation: flickr 19s linear infinite forwards;
+          animation: flickr 19s linear infinite forwards;
+  -webkit-animation-delay: 0.1578947368s;
+          animation-delay: 0.1578947368s;
+}
+
+.star:nth-of-type(20) {
+  margin: 8vh 17vw;
+  -webkit-animation: flickr 40s linear infinite forwards;
+          animation: flickr 40s linear infinite forwards;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.star:nth-of-type(21) {
+  margin: 1vh 57vw;
+  -webkit-animation: flickr 21s linear infinite forwards;
+          animation: flickr 21s linear infinite forwards;
+  -webkit-animation-delay: 0.2380952381s;
+          animation-delay: 0.2380952381s;
+}
+
+.star:nth-of-type(22) {
+  margin: 6vh 40vw;
+  -webkit-animation: flickr 88s linear infinite forwards;
+          animation: flickr 88s linear infinite forwards;
+  -webkit-animation-delay: 0.0454545455s;
+          animation-delay: 0.0454545455s;
+}
+
+.star:nth-of-type(23) {
+  margin: 10vh 53vw;
+  -webkit-animation: flickr 46s linear infinite forwards;
+          animation: flickr 46s linear infinite forwards;
+  -webkit-animation-delay: 0.0869565217s;
+          animation-delay: 0.0869565217s;
+}
+
+.star:nth-of-type(24) {
+  margin: 3vh 69vw;
+  -webkit-animation: flickr 96s linear infinite forwards;
+          animation: flickr 96s linear infinite forwards;
+  -webkit-animation-delay: 0.0416666667s;
+          animation-delay: 0.0416666667s;
+}
+
+.star:nth-of-type(25) {
+  margin: 2vh 37vw;
+  -webkit-animation: flickr 50s linear infinite forwards;
+          animation: flickr 50s linear infinite forwards;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.star:nth-of-type(26) {
+  margin: 9vh 91vw;
+  -webkit-animation: flickr 26s linear infinite forwards;
+          animation: flickr 26s linear infinite forwards;
+  -webkit-animation-delay: 0.1538461538s;
+          animation-delay: 0.1538461538s;
+}
+
+.star:nth-of-type(27) {
+  margin: 5vh 33vw;
+  -webkit-animation: flickr 108s linear infinite forwards;
+          animation: flickr 108s linear infinite forwards;
+  -webkit-animation-delay: 0.0740740741s;
+          animation-delay: 0.0740740741s;
+}
+
+.star:nth-of-type(28) {
+  margin: 10vh 64vw;
+  -webkit-animation: flickr 84s linear infinite forwards;
+          animation: flickr 84s linear infinite forwards;
+  -webkit-animation-delay: 0.1785714286s;
+          animation-delay: 0.1785714286s;
+}
+
+.star:nth-of-type(29) {
+  margin: 10vh 41vw;
+  -webkit-animation: flickr 87s linear infinite forwards;
+          animation: flickr 87s linear infinite forwards;
+  -webkit-animation-delay: 0.1379310345s;
+          animation-delay: 0.1379310345s;
+}
+
+.star:nth-of-type(30) {
+  margin: 7vh 99vw;
+  -webkit-animation: flickr 120s linear infinite forwards;
+          animation: flickr 120s linear infinite forwards;
+  -webkit-animation-delay: 0.1333333333s;
+          animation-delay: 0.1333333333s;
+}
+
+.star:nth-of-type(31) {
+  margin: 7vh 43vw;
+  -webkit-animation: flickr 93s linear infinite forwards;
+          animation: flickr 93s linear infinite forwards;
+  -webkit-animation-delay: 0.1612903226s;
+          animation-delay: 0.1612903226s;
+}
+
+.star:nth-of-type(32) {
+  margin: 1vh 89vw;
+  -webkit-animation: flickr 64s linear infinite forwards;
+          animation: flickr 64s linear infinite forwards;
+  -webkit-animation-delay: 0.0625s;
+          animation-delay: 0.0625s;
+}
+
+.star:nth-of-type(33) {
+  margin: 8vh 43vw;
+  -webkit-animation: flickr 66s linear infinite forwards;
+          animation: flickr 66s linear infinite forwards;
+  -webkit-animation-delay: 0.0303030303s;
+          animation-delay: 0.0303030303s;
+}
+
+.star:nth-of-type(34) {
+  margin: 8vh 34vw;
+  -webkit-animation: flickr 136s linear infinite forwards;
+          animation: flickr 136s linear infinite forwards;
+  -webkit-animation-delay: 0.1470588235s;
+          animation-delay: 0.1470588235s;
+}
+
+.star:nth-of-type(35) {
+  margin: 3vh 84vw;
+  -webkit-animation: flickr 140s linear infinite forwards;
+          animation: flickr 140s linear infinite forwards;
+  -webkit-animation-delay: 0.1142857143s;
+          animation-delay: 0.1142857143s;
+}
+
+.star:nth-of-type(36) {
+  margin: 3vh 52vw;
+  -webkit-animation: flickr 108s linear infinite forwards;
+          animation: flickr 108s linear infinite forwards;
+  -webkit-animation-delay: 0.1388888889s;
+          animation-delay: 0.1388888889s;
+}
+
+.star:nth-of-type(37) {
+  margin: 7vh 61vw;
+  -webkit-animation: flickr 111s linear infinite forwards;
+          animation: flickr 111s linear infinite forwards;
+  -webkit-animation-delay: 0.0810810811s;
+          animation-delay: 0.0810810811s;
+}
+
+.star:nth-of-type(38) {
+  margin: 1vh 86vw;
+  -webkit-animation: flickr 152s linear infinite forwards;
+          animation: flickr 152s linear infinite forwards;
+  -webkit-animation-delay: 0.1315789474s;
+          animation-delay: 0.1315789474s;
+}
+
+.star:nth-of-type(39) {
+  margin: 5vh 15vw;
+  -webkit-animation: flickr 117s linear infinite forwards;
+          animation: flickr 117s linear infinite forwards;
+  -webkit-animation-delay: 0.1025641026s;
+          animation-delay: 0.1025641026s;
+}
+
+.star:nth-of-type(40) {
+  margin: 1vh 9vw;
+  -webkit-animation: flickr 120s linear infinite forwards;
+          animation: flickr 120s linear infinite forwards;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.star:nth-of-type(41) {
+  margin: 7vh 55vw;
+  -webkit-animation: flickr 123s linear infinite forwards;
+          animation: flickr 123s linear infinite forwards;
+  -webkit-animation-delay: 0.1219512195s;
+          animation-delay: 0.1219512195s;
+}
+
+.star:nth-of-type(42) {
+  margin: 6vh 89vw;
+  -webkit-animation: flickr 126s linear infinite forwards;
+          animation: flickr 126s linear infinite forwards;
+  -webkit-animation-delay: 0.119047619s;
+          animation-delay: 0.119047619s;
+}
+
+.star:nth-of-type(43) {
+  margin: 3vh 37vw;
+  -webkit-animation: flickr 43s linear infinite forwards;
+          animation: flickr 43s linear infinite forwards;
+  -webkit-animation-delay: 0.023255814s;
+          animation-delay: 0.023255814s;
+}
+
+.star:nth-of-type(44) {
+  margin: 2vh 32vw;
+  -webkit-animation: flickr 132s linear infinite forwards;
+          animation: flickr 132s linear infinite forwards;
+  -webkit-animation-delay: 0.0681818182s;
+          animation-delay: 0.0681818182s;
+}
+
+.star:nth-of-type(45) {
+  margin: 10vh 17vw;
+  -webkit-animation: flickr 90s linear infinite forwards;
+          animation: flickr 90s linear infinite forwards;
+  -webkit-animation-delay: 0.1111111111s;
+          animation-delay: 0.1111111111s;
+}
+
+.star:nth-of-type(46) {
+  margin: 1vh 21vw;
+  -webkit-animation: flickr 184s linear infinite forwards;
+          animation: flickr 184s linear infinite forwards;
+  -webkit-animation-delay: 0.0869565217s;
+          animation-delay: 0.0869565217s;
+}
+
+.star:nth-of-type(47) {
+  margin: 3vh 30vw;
+  -webkit-animation: flickr 94s linear infinite forwards;
+          animation: flickr 94s linear infinite forwards;
+  -webkit-animation-delay: 0.0212765957s;
+          animation-delay: 0.0212765957s;
+}
+
+.star:nth-of-type(48) {
+  margin: 7vh 29vw;
+  -webkit-animation: flickr 96s linear infinite forwards;
+          animation: flickr 96s linear infinite forwards;
+  -webkit-animation-delay: 0.0625s;
+          animation-delay: 0.0625s;
+}
+
+.star:nth-of-type(49) {
+  margin: 4vh 7vw;
+  -webkit-animation: flickr 196s linear infinite forwards;
+          animation: flickr 196s linear infinite forwards;
+  -webkit-animation-delay: 0.0408163265s;
+          animation-delay: 0.0408163265s;
+}
+
+.star:nth-of-type(50) {
+  margin: 2vh 93vw;
+  -webkit-animation: flickr 150s linear infinite forwards;
+          animation: flickr 150s linear infinite forwards;
+  -webkit-animation-delay: 0.02s;
+          animation-delay: 0.02s;
+}
+
+@-webkit-keyframes flickr {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes flickr {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}
+@-webkit-keyframes firework {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes firework {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+<div class='night-sky'></div>
+<h1>Cheers to a fantastic year ahead! Wishing you a year ahead filled with love, laughter, and <br>the accomplishment of your goals. May each day be a step towards a brighter future. May<br>the new year be a journey of discovery, a quest for joy, and a celebration of the amazing<br>person you are
+  <h2>I am Pramod Tamang wishing you everyone!<br>Happy New Year<br>2024</h1></h2>
+<!-- / Create Fireworks -->
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+<div class='firework'>
+  <!-- / Create Stars -->
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+  <div class='star'></div>
+</div>
+</body>
+</html>
